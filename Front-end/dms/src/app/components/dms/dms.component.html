@@ -1,0 +1,83 @@
+ 
+   
+<body>
+
+ 
+
+<div>
+ 
+  <form [formGroup]="employeeSearch" (ngSubmit)="onSearch()">
+    <label for="fname">Name</label>
+    <input formControlName="name"   type="text" id="name" name=" name" placeholder=" name">
+ 
+    <label>Code:</label>
+    <input formControlName="code" type="text" id="code" name="code" placeholder="code">
+<br>
+    <label>ID:</label>
+    <input formControlName="id" type="text" id="lname" name="code" placeholder="ID">
+
+    <label>Department:</label>
+    <input formControlName="department"   type="text" id="fname" name=" name" placeholder="Department">
+ <br>
+    <label>ContractType:</label>
+    <input type="text" formControlName="contractType" id="lname" name="code" placeholder="ContractType">
+
+     
+<br>
+    <label>BirthDate:</label>
+    <input type="date" formControlName="birthDate" id="fname" name=" name" placeholder="BirthDate">
+    <label>BirthCity:</label>
+    <input type="text" formControlName="birthCity" id="lname" name="code" placeholder="BirthCity">
+<br>
+    <label>Status:</label>
+    <input type="text" formControlName="status" id="lname" name="code" placeholder="Your last name..">
+
+    <label>JobTitle:</label>
+    <input type="text" formControlName="jobTitle" id="lname" name="code" placeholder="JobTitle">
+    <br>
+    <label>DirectManager:</label>
+    <input type="text" formControlName="directManager" id="lname" name="code" placeholder=" DirectManager">
+
+      
+  
+ 
+
+<br>
+
+
+ 
+  <input type="submit" value="view">
+  
+ 
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>BirthDate</th>
+        <th>BirthCity</th>
+        <th>Code</th>
+        <th>Department</th>
+        <th>Job Title</th>
+        <th>Direct Manager</th>
+        <th>Contract Type</th>
+        <th>Status</th>
+        
+      </tr>
+     
+      <tr *ngFor="let item of Employees; let currentIndex = index">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.birthDate}}</td>
+        <td>{{ item.birthCity }}</td>
+        <td>{{ item.code}}</td>
+        <td>{{ item.department}}</td>
+        <td>{{ item.jobTitle}}</td>
+        <td>{{ item.directManager }}</td>
+        <td>{{ item.contractType}}</td>
+        <td>{{ item.status}}</td>
+        
+      </tr>
+   
+  </table> 
+  
+ 
